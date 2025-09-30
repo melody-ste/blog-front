@@ -84,3 +84,26 @@ button {
 button:hover {
   box-shadow: 0px 0px 10px rgba(49, 20, 8, 0.4);
 }
+
+/*           CARD           */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 0.5em 2rem;
+  border-radius: 12px;
+  background: var(--color-secondary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.loadmore {
+  margin: 2rem auto;
+  display: flex;
+}
+

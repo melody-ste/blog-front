@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Helvetica, Arial, sans-serif;
 
   --color-primary: #623528;
   --color-secondary: #956643;
@@ -22,3 +22,6 @@ h1,h2,h3 {
   color: var(--color-primary);
 }
 
+.container {
+  margin: 2rem 5rem;
+}
