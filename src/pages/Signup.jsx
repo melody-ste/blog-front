@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +29,8 @@ function Signup() {
     const token = res.headers.get("Authorization")?.split(" ")[1];
 
     login(data.user, token);
+
+    navigate("/profile");
   };
 
   return (

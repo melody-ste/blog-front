@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await fetch("http://localhost:3000/users/sign_in", {
@@ -22,6 +24,8 @@ function Login() {
     const data = await res.json();
     const token = res.headers.get("Authorization")?.split(" ")[1];
     login(data.user, token);
+
+    navigate("/profile");
   };
 
   return (

@@ -25,11 +25,20 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
+nav button,
+.logout {
+  line-height: 1;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
 /*============================*/
-/*           FORM           */
+/*            FORM            */
 /*============================*/
 
 form {
@@ -57,6 +66,8 @@ form input:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(49, 20, 8, 0.2);
 }
+
+/*          BUTTON          */
 
 button {
   padding: 1rem;
