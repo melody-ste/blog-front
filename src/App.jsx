@@ -3,19 +3,23 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <AuthProvider>
       <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </main>
-    </div>
+    </AuthProvider>
   )
 }
 
