@@ -26,9 +26,13 @@ function Login() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor="email">Email :</label>
       <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
+      <label htmlFor="password">Mot de passe :</label>
       <input value={password} onChange={(e) => setPassword(e.target.value)} type="password"/>
-      <button>Login</button>
+      <div>
+        <button type="submit">Login</button>
+      </div>
     </form>
   );
 }

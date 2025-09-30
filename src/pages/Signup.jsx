@@ -31,24 +31,30 @@ function Signup() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor="email">Email :</label>
       <input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
       />
+      <label htmlFor="password">Mot de passe :</label>
       <input
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         type="password"
         placeholder="Mot de passe"
       />
+      <label htmlFor="confirmation">Confirmation :</label>
       <input
         value={passwordConfirmation}
         onChange={(e) => setPasswordConfirmation(e.target.value)}
         type="password"
         placeholder="Confirmation"
       />
-      <button>S'inscrire</button>
+      <div>
+        <button type="submit">S'inscrire</button>
+      </div>
+      
     </form>
   );
 }
